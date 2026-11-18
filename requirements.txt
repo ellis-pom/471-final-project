@@ -1,0 +1,40 @@
+# Python 3.9 (see README). Exact pins so a fresh clone reproduces our setup.
+# CybORG CAGE 2 is vendored as a git submodule pinned to commit 26ce1c1 and installed editable:
+-e ./external/cage-challenge-2/CybORG
+
+bcrypt==5.0.0
+cffi==2.0.0
+cloudpickle==3.1.3
+contourpy==1.3.0
+cryptography==50.0.2
+cycler==0.12.1
+docutils==0.23
+exceptiongroup==1.3.1
+fonttools==4.60.2
+gym==0.26.2
+gym-notices==0.1.0
+importlib-metadata==8.7.1
+importlib-resources==6.5.2
+iniconfig==2.1.0
+invoke==3.0.3
+kiwisolver==1.4.7
+matplotlib==3.7.5
+numpy==1.23.5
+packaging==26.3
+paramiko==5.1.0
+pillow==11.3.0
+pluggy==1.6.0
+prettytable==3.16.0
+pycparser==2.23
+pygments==2.21.0
+pynacl==1.6.2
+pyparsing==3.3.3
+pytest==8.4.2
+python-dateutil==3.0.0
+pyyaml==6.0.3
+six==1.17.0
+tomli==2.5.0
+typing-extensions==4.16.0
+tzdata==2026.6
+wcwidth==0.9.4
+zipp==3.23.1

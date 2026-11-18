@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+# training outputs: ignored except the committed sample run
+results/*
+!results/sample_*/

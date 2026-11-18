@@ -1,0 +1,3 @@
+[submodule "external/cage-challenge-2"]
+	path = external/cage-challenge-2
+	url = https://github.com/cage-challenge/cage-challenge-2.git
