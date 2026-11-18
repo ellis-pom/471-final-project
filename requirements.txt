@@ -1,6 +1,8 @@
 # Python 3.9 (see README). Exact pins so a fresh clone reproduces our setup.
 # CybORG CAGE 2 is vendored as a git submodule pinned to commit 26ce1c1 and installed editable:
 -e ./external/cage-challenge-2/CybORG
+# our own package (src/cyberq), editable so `python -m cyberq.train` works:
+-e .
 
 bcrypt==5.0.0
 cffi==2.0.0

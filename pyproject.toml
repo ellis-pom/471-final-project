@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyberq"
+version = "0.1.0"
+description = "Tabular Q-learning blue defender for CybORG CAGE Challenge 2 (CS471 final project)"
+requires-python = ">=3.9,<3.11"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: runs the real CybORG simulator (still only a few seconds)"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
