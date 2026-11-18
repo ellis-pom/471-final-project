@@ -1,0 +1,12 @@
+action,Q-agent,Random,Sleep,RestoreOnly
+Sleep,59.8,8.87,100.0,44.07
+Monitor,6.47,8.67,0.0,0.0
+Analyse-User,10.13,8.67,0.0,0.0
+Analyse-Enterprise,0.0,8.27,0.0,0.0
+Analyse-Operational,0.0,9.2,0.0,0.0
+Remove-User,0.0,8.07,0.0,0.0
+Remove-Enterprise,23.0,11.67,0.0,0.0
+Remove-Operational,0.0,9.13,0.0,0.0
+Restore-User,0.0,9.4,0.0,55.93
+Restore-Enterprise,0.13,8.93,0.0,0.0
+Restore-Operational,0.47,9.13,0.0,0.0

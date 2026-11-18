@@ -1,0 +1,19 @@
+state,label,best_action,best_q,runner_up,runner_up_q,gap,state_visits,best_visits
+0,User:0 | Ent:0 | OpSrv:no,Analyse-User,-7.819969670611986,Remove-User,-7.822117470242859,0.002147799630873415,2530,260
+1,User:0 | Ent:0 | OpSrv:yes,Remove-Operational,-8.316587802034274,Analyse-User,-8.324256228941342,0.007668426907068593,614,46
+2,User:0 | Ent:1 | OpSrv:no,Restore-Enterprise,-8.399517074136252,Analyse-Operational,-8.534350091223684,0.13483301708743234,2270,1056
+3,User:0 | Ent:1 | OpSrv:yes,Restore-Operational,-9.852550910591617,Monitor,-9.855119942048907,0.0025690314572894835,882,169
+4,User:0 | Ent:2+ | OpSrv:no,Analyse-Operational,-8.363170454567086,Analyse-Enterprise,-8.394203062052656,0.03103260748556913,467,42
+5,User:0 | Ent:2+ | OpSrv:yes,Restore-Operational,-10.89542941257756,Restore-Enterprise,-10.93641927253002,0.04098985995246096,545,112
+6,User:1 | Ent:0 | OpSrv:no,Remove-Enterprise,-8.92390442667201,Analyse-User,-8.930596713493781,0.006692286821770921,2774,267
+7,User:1 | Ent:0 | OpSrv:yes,Analyse-User,-8.784876626001562,Monitor,-8.814423464326891,0.029546838325329006,334,28
+8,User:1 | Ent:1 | OpSrv:no,Monitor,-9.636455727342053,Sleep,-9.665921829137082,0.02946610179502862,2972,174
+9,User:1 | Ent:1 | OpSrv:yes,Restore-Enterprise,-9.828487374862556,Remove-User,-10.346067935264754,0.5175805604021981,569,116
+10,User:1 | Ent:2+ | OpSrv:no,Sleep,-9.883644060197526,Remove-Operational,-9.892592281015727,0.008948220818201236,617,57
+11,User:1 | Ent:2+ | OpSrv:yes,Restore-Operational,-10.782561274159132,Analyse-Enterprise,-10.790190148001493,0.007628873842360662,426,71
+12,User:2+ | Ent:0 | OpSrv:no,Sleep,0.0,Monitor,0.0,0.0,0,0
+13,User:2+ | Ent:0 | OpSrv:yes,Sleep,0.0,Monitor,0.0,0.0,0,0
+14,User:2+ | Ent:1 | OpSrv:no,Sleep,0.0,Monitor,0.0,0.0,0,0
+15,User:2+ | Ent:1 | OpSrv:yes,Sleep,0.0,Monitor,0.0,0.0,0,0
+16,User:2+ | Ent:2+ | OpSrv:no,Sleep,0.0,Monitor,0.0,0.0,0,0
+17,User:2+ | Ent:2+ | OpSrv:yes,Sleep,0.0,Monitor,0.0,0.0,0,0

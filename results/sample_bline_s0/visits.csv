@@ -1,0 +1,19 @@
+state,label,Sleep,Monitor,Analyse-User,Analyse-Enterprise,Analyse-Operational,Remove-User,Remove-Enterprise,Remove-Operational,Restore-User,Restore-Enterprise,Restore-Operational,total
+0,User:0 | Ent:0 | OpSrv:no,262,277,260,273,268,282,305,283,104,112,104,2530
+1,User:0 | Ent:0 | OpSrv:yes,39,54,39,47,59,46,50,46,39,35,160,614
+2,User:0 | Ent:1 | OpSrv:no,106,118,108,112,113,109,269,99,95,1056,85,2270
+3,User:0 | Ent:1 | OpSrv:yes,55,52,64,58,65,52,47,59,50,211,169,882
+4,User:0 | Ent:2+ | OpSrv:no,35,45,41,44,42,36,36,50,34,74,30,467
+5,User:0 | Ent:2+ | OpSrv:yes,40,40,46,30,44,43,40,37,29,84,112,545
+6,User:1 | Ent:0 | OpSrv:no,281,301,306,297,281,347,267,317,168,99,110,2774
+7,User:1 | Ent:0 | OpSrv:yes,22,25,28,35,23,27,27,31,28,24,64,334
+8,User:1 | Ent:1 | OpSrv:no,175,174,185,168,170,162,484,162,201,978,113,2972
+9,User:1 | Ent:1 | OpSrv:yes,46,45,45,46,37,36,50,40,28,116,80,569
+10,User:1 | Ent:2+ | OpSrv:no,57,60,52,62,55,56,61,60,39,72,43,617
+11,User:1 | Ent:2+ | OpSrv:yes,30,38,41,37,26,34,41,36,24,48,71,426
+12,User:2+ | Ent:0 | OpSrv:no,0,0,0,0,0,0,0,0,0,0,0,0
+13,User:2+ | Ent:0 | OpSrv:yes,0,0,0,0,0,0,0,0,0,0,0,0
+14,User:2+ | Ent:1 | OpSrv:no,0,0,0,0,0,0,0,0,0,0,0,0
+15,User:2+ | Ent:1 | OpSrv:yes,0,0,0,0,0,0,0,0,0,0,0,0
+16,User:2+ | Ent:2+ | OpSrv:no,0,0,0,0,0,0,0,0,0,0,0,0
+17,User:2+ | Ent:2+ | OpSrv:yes,0,0,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,51 @@
+{
+  "hyperparams": {
+    "n_states": 18,
+    "n_actions": 11,
+    "alpha": 0.1,
+    "gamma": 0.95,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay_episodes": 400,
+    "seed": 0
+  },
+  "episodes_trained": 500,
+  "epsilon_final": 0.050000000000000044,
+  "saved_at": "2026-11-18T22:29:09+00:00",
+  "red_agent": "bline",
+  "max_steps": 30,
+  "train_seed": 0,
+  "state_labels": [
+    "User:0 | Ent:0 | OpSrv:no",
+    "User:0 | Ent:0 | OpSrv:yes",
+    "User:0 | Ent:1 | OpSrv:no",
+    "User:0 | Ent:1 | OpSrv:yes",
+    "User:0 | Ent:2+ | OpSrv:no",
+    "User:0 | Ent:2+ | OpSrv:yes",
+    "User:1 | Ent:0 | OpSrv:no",
+    "User:1 | Ent:0 | OpSrv:yes",
+    "User:1 | Ent:1 | OpSrv:no",
+    "User:1 | Ent:1 | OpSrv:yes",
+    "User:1 | Ent:2+ | OpSrv:no",
+    "User:1 | Ent:2+ | OpSrv:yes",
+    "User:2+ | Ent:0 | OpSrv:no",
+    "User:2+ | Ent:0 | OpSrv:yes",
+    "User:2+ | Ent:1 | OpSrv:no",
+    "User:2+ | Ent:1 | OpSrv:yes",
+    "User:2+ | Ent:2+ | OpSrv:no",
+    "User:2+ | Ent:2+ | OpSrv:yes"
+  ],
+  "action_labels": [
+    "Sleep",
+    "Monitor",
+    "Analyse-User",
+    "Analyse-Enterprise",
+    "Analyse-Operational",
+    "Remove-User",
+    "Remove-Enterprise",
+    "Remove-Operational",
+    "Restore-User",
+    "Restore-Enterprise",
+    "Restore-Operational"
+  ]
+}
