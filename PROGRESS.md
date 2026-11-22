@@ -1,6 +1,6 @@
 # Checkpoint Progress Summary
 
-**Team:** Ellis _[TODO: surname]_, William Kim, Brendan Gibbons
+**Team:** Ellis Pomales III, William Kim, Brendan Gibbons
 
 ## Completed functionality
 - CybORG CAGE 2 installed and pinned (Python 3.9, WSL2), plus a smoke script that prints the raw blue observation.
@@ -29,6 +29,4 @@ More episodes and seeds, plus tuning of α and ε. Convergence plots across seed
 - Episodes never end on their own, which forced a decision about bootstrapping at the time limit.
 
 ## Member contributions
-- **Ellis:** _[TODO: fill in]_
-- **William Kim:** _[TODO: fill in]_
-- **Brendan Gibbons:** _[TODO: fill in]_
+The work was split evenly among all three members: Ellis Pomales III, William Kim and Brendan Gibbons.
