@@ -29,4 +29,7 @@ More episodes and seeds, plus tuning of α and ε. Convergence plots across seed
 - Episodes never end on their own, which forced a decision about bootstrapping at the time limit.
 
 ## Member contributions
-The work was split evenly among all three members: Ellis Pomales III, William Kim and Brendan Gibbons.
+The work was split evenly among the three of us, with each member owning a different part:
+- **Ellis Pomales III:** set up the repository and environment, and built the implementation (wrapper, Q-learning agent, baselines, CLIs, tests, docs) with the help of an AI coding assistant (Claude Code), which the course allows.
+- **William Kim:** researched the project area and identified instructors we could contact for additional help.
+- **Brendan Gibbons:** cross-checked alternative project ideas, and reviewed our work against the checkpoint rubric.

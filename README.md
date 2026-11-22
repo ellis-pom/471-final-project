@@ -97,6 +97,33 @@ RestoreOnly         -15.9    0.5   -16.4   -13.7        14.8           1.1      
 
 See [PROGRESS.md](PROGRESS.md) for what these numbers mean.
 
+## Correctness checks (what each test proves)
+
+`python -m pytest -v` runs 22 tests (**22 passed** at the `checkpoint` tag, about 1 s). Each test's docstring
+states the property it checks. Summary:
+
+| # | Test (file) | What it checks | Expected behavior | Result |
+|---|---|---|---|---|
+| 1 | Q-update math (`test_q_update.py`) | One `update()` call applies exactly `Q ← Q + α[r + γ·max Q(s′,·) − Q]` | Hand calculation: Q(0,1)=2.0, max Q(1,·)=5, r=−1, α=0.1, γ=0.9 → target 3.5, TD error 1.5, new Q = **2.15** | Pass: agent gives 2.15 |
+| 2 | Terminal update (`test_q_update.py`) | At the end of an episode there is no future value | Target is just r; Q(s′,·) is ignored | Pass |
+| 3 | Greedy mode (`test_q_update.py`) | Evaluation never explores | With `greedy=True`, even at ε = 1.0 the agent always returns argmax Q (ties → lowest index) | Pass |
+| 4 | Exploration (`test_q_update.py`) | Training mode really explores | At ε = 1 the choice is uniform: a non-greedy action about half the time | Pass |
+| 5 | ε decay (`test_q_update.py`) | The exploration schedule | ε falls linearly from 1.0 to the 0.05 floor, then stays there | Pass |
+| 6 | **Toy MDP** (`test_toy_mdp.py`, seeds 0/1/2) | The whole loop (select → update → decay) actually *learns*, independent of CybORG | 4-state corridor, −1 per step, γ = 0.9. Optimal policy is "always right", with Q\*(0,R) = −2.71, Q\*(1,R) = −1.9, Q\*(2,R) = −1.0 | Pass: greedy policy = optimum and Q within 0.05 of Q\* for all 3 seeds |
+| 7 | Save/load (`test_save_load.py`) | A saved agent comes back identical | Q-table, visit counts, hyperparameters, ε, episode count and JSON metadata all round-trip exactly | Pass |
+| 8 | "Flagged" rule (`test_abstraction.py`) | The definition the whole state space rests on | Flagged ⇔ Activity ≠ None **or** Compromised ≠ No (a host after Remove, Compromised = Unknown, stays flagged) | Pass |
+| 9 | Binning (`test_abstraction.py`) | Counts become 0 / 1 / 2+ | Every count ≥ 2 lands in the 2+ bin | Pass |
+| 10 | Encode/decode (`test_abstraction.py`) | The 18 states are a clean numbering | All 18 bin combinations ↔ indices 0–17, no collisions, nothing missing | Pass |
+| 11 | Synthetic observations (`test_abstraction.py`) | Real-shaped blue tables map to the right state | Hand-built tables give the expected bins and index; Defender and Op_Host0–2 don't change the state | Pass (2 tests) |
+| 12 | Action table (`test_actions.py`) | The 11 approved actions, in order | Sleep, Monitor, then {Analyse, Remove, Restore} × {User, Enterprise, Operational} | Pass |
+| 13 | Most-suspicious-host rule (`test_actions.py`) | The wrapper hits the right machine | Compromise level beats Activity; then Exploit > Scan; then host order; nothing flagged → User0 / Enterprise0 / Op_Server0; Defender is never targeted | Pass (4 tests) |
+| 14 | Real simulator (`test_integration.py`, `slow`) | Wrapper + CybORG work end to end | 2 episodes run without crashing; states stay 0–17, actions 0–10 accepted, episode ends at exactly `max_steps`, rewards ≤ 0 | Pass |
+| 15 | Reproducibility (`test_integration.py`, `slow`) | Same seed gives the same run | Same seed + same actions → identical rewards and states | Pass |
+| 16 | Evaluation doesn't learn (`test_integration.py`, `slow`) | Separate evaluation episodes use the frozen policy | Greedy episodes against the real simulator leave the Q-table and visit counts unchanged | Pass |
+
+Tests 1, 6 and 16 are the core evidence for the checkpoint: the update rule is mathematically right, the agent
+converges to a known optimum when one exists, and evaluation runs the learned policy without exploring or learning.
+
 ## Repository layout
 
 ```
